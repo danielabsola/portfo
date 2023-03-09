@@ -4,7 +4,7 @@ import pandas as pd
 import csv
 from email.message import EmailMessage
 from flask import Flask, render_template, request, redirect
-from flask_mail import Mail, Message
+# from flask_mail import Mail, Message
 
 
 app = Flask(__name__)
@@ -22,18 +22,18 @@ def page_name(page_name):
 # def work_exp_IT():
 #     return render_template('work_exp_IT.html')
 
-def send_email(data):
-    mail= Mail(app)
-    app.config['MAIL_SERVER']='smtp.gmail.com'
-    app.config['MAIL_PORT'] = 465
-    app.config['MAIL_USERNAME'] = 'dbshoy@gmail.com'
-    app.config['MAIL_PASSWORD'] = 'XXXXX'
-    app.config['MAIL_USE_TLS'] = False
-    app.config['MAIL_USE_SSL'] = True
-    mail = Mail(app)
-    msg = Message('From your website', sender = data['email'], recipients = ['dbshoy@gmail.com'])
-    msg.body = data['message']
-    mail.send(msg)
+# def send_email(data):
+#     mail= Mail(app)
+#     app.config['MAIL_SERVER']='smtp.gmail.com'
+#     app.config['MAIL_PORT'] = 465
+#     app.config['MAIL_USERNAME'] = 'dbshoy@gmail.com'
+#     app.config['MAIL_PASSWORD'] = 'XXXXX'
+#     app.config['MAIL_USE_TLS'] = False
+#     app.config['MAIL_USE_SSL'] = True
+#     mail = Mail(app)
+#     msg = Message('From your website', sender = data['email'], recipients = ['dbshoy@gmail.com'])
+#     msg.body = data['message']
+#     mail.send(msg)
 
 def is_valid_email(email):
     """Validate email using regular expressions."""
@@ -51,8 +51,6 @@ def write_to_txt(data):
         database.write(f'\n{name},{email},{message}')
 
 def write_to_csv(data):
-    # dt = pd.DataFrame(data)
-    # dt.to_csv('database2.csv', index=False)
     with open('database.csv', mode='a', newline='') as database:
         email = data['email']
         name = data['name']
