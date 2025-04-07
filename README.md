@@ -4,7 +4,7 @@ Este repositorio contiene mi portafolio profesional, diseñado para presentar qu
 
 ## ✨ Sobre mí
 
-Soy una profesional con más de 6 años de experiencia trabajando en proyectos relacionados con datos, tecnología y automatización. Me especializo en la transformación de necesidades de negocio en soluciones técnicas escalables, colaborativas y centradas en el usuario.
+Soy una profesional con más de 10 años de experiencia trabajando en proyectos relacionados con datos, tecnología y automatización. Me especializo en la transformación de necesidades de negocio en soluciones técnicas escalables, colaborativas y centradas en el usuario.
 
 ## 🎨 Sobre el portfolio
 
